@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IBYDK Gameboard Test</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+
+  <body>
+    <div id="app" class="container">
+      <!-- <h1 class="text-white wiggle">Gameboard</h1> -->
+
+      <div class="settings d-flex justify-content-between m-2">
+         
+        <a id="settings-btn" href="#settings" type="button" class="btn btn-secondary p-2">
+          <i class="fa-solid fa-gear"></i>  Settings
+        </a>
+        <a id="FBot" href="#question" type="button" class="btn final-bot btn-danger" onclick="playCard(this.id)">
+          Final Bot
+       </a>
+        <a id="reset" href="" type="button" class="btn btn-danger">
+          Reset
+       </a>
+        
+      </div>
+      
+      <div id="Gameboard" class="gameboard m-4">
+        <figure class="  gameboard-item-1">
+            <img src="img/legirornah.png" class="gameboard-img" alt="Image 1">
+          </figure>
+          <figure class="  gameboard-item-2">
+            <img src="img/ss.png" class="gameboard-img" alt="Image 2">
+          </figure>
+          <figure class="  gameboard-item-3">
+            <img src="img/acronymspeedfire.png" class="gameboard-img" alt="Image 3">
+          </figure>
+          <figure class="  gameboard-item-4">
+            <img src="img/wildcard.png" class="gameboard-img" alt="Image 4">
+          </figure>
+          <figure class="  gameboard-item-5">
+            <img src="img/certainly.png" class="gameboard-img" alt="Image 5">
+          </figure>
+          
+         
+            <figure id="LNx1" class="legit-nah gameboard-item gameboard-item-1-1 hover-card active" onclick="playCard(this.id)">
+              <a id="link" href="#question" class="point">
+                <img src="img/card-1.png" class="gameboard-img" alt="Card-LN-1">
+                <h2 class="pointCard text-center">1</h2>
+              </a>
+           </figure>
+          
+          <figure id="SSx1" class="succinctly-succinct gameboard-item gameboard-item-2-1 hover-card active" onclick="playCard(this.id)">
+            <a id="link" href="#question" class="point">
+              <img src="img/card-2.png" class="gameboard-img" alt="Card-SS-1">
+              <h2 class="pointCard text-center">1</h2>
+            </a>
+         </figure>
+
+          <figure id="ASx1" class="acronym-speedfire gameboard-item gameboard-item-3-1 hover-card active" onclick="playCard(this.id)">
+            <a id="link" href="#question" class="point">
+              <img src="img/card-3.png" class="gameboard-img" alt="Card-AS-1">
+              <h2 class="pointCard text-center">1</h2>
+            </a>
+         </figure>
+          
+          <figure id="WCx1" class="wild-card gameboard-item gameboard-item-4-1 hover-card" onclick="playCard(this.id)">
+            <a id="link" href="#question" class="point">
+              <img src="img/card-4.png" class="gameboard-img" alt="Card-WC-1">
+              <h2 class="pointCard text-center">1</h2>
+            </a>
+         </figure>
+
+          <figure id="Cx1" class="certainly gameboard-item gameboard-item-5-1 hover-card" onclick="playCard(this.id)">
+            <a id="link" href="#question" class="point">
+              <img src="img/card-5.png" class="gameboard-img" alt="Card-C-1">
+              <h2 class="pointCard text-center">1</h2>
+            </a>
+         </figure>
+          
+          <figure id="LNx2" class="legit-nah gameboard-item gameboard-item-1-2 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-1.png" class="gameboard-img" alt="Card-LN-2">
+              <h2 class="pointCard text-center">2</h2>
+            </a>
+         </figure>
+
+          <figure id="SSx2" class="succinctly-succinct gameboard-item gameboard-item-2-2 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-2.png" class="gameboard-img" alt="Card-SS-2">
+              <h2 class="pointCard text-center">2</h2>
+            </a>
+         </figure>
+          
+          <figure id="ASx2" class="acronym-speedfire gameboard-item gameboard-item-3-2 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-3.png" class="gameboard-img" alt="Card-AS-2">
+              <h2 class="pointCard text-center">2</h2>
+            </a>
+         </figure>
+
+          <figure id="WCx2" class="wild-card gameboard-item gameboard-item-4-2 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-4.png" class="gameboard-img" alt="Card-WC-2">
+              <h2 class="pointCard text-center">2</h2>
+            </a>
+         </figure>
+          
+          <figure id="Cx2" class="certainly gameboard-item gameboard-item-5-2 hover-card" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-5.png" class="gameboard-img" alt="Card-C-2">
+              <h2 class="pointCard text-center">2</h2>
+            </a>
+         </figure>
+
+          <figure id="LNx3" class="legit-nah gameboard-item gameboard-item-1-3 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-1.png" class="gameboard-img" alt="Card-LN-3">
+              <h2 class="pointCard text-center">3</h2>
+            </a>
+         </figure>
+          
+          <figure id="SSx3" class="succinctly-succinct gameboard-item gameboard-item-2-3 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-2.png" class="gameboard-img" alt="Card-SS-3">
+              <h2 class="pointCard text-center">3</h2>
+            </a>
+         </figure>
+
+          <figure id="ASx3" class="acronym-speedfire gameboard-item gameboard-item-3-3 hover-card" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-3.png" class="gameboard-img" alt="Card-AS-3">
+              <h2 class="pointCard text-center">3</h2>
+            </a>
+         </figure>
+          
+          <figure id="WCx3" class="wild-card gameboard-item gameboard-item-4-3 hover-card active" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-4.png" class="gameboard-img" alt="Card-WC-3">
+              <h2 class="pointCard text-center">3</h2>
+            </a>
+         </figure>
+
+          <figure id="Cx3" class="certainly gameboard-item gameboard-item-5-3 hover-card" onclick="playCard(this.id)">            
+            <a id="link" href="#question" class="point">
+              <img src="img/card-5.png" class="gameboard-img" alt="Card-C-3">
+              <h2 class="pointCard text-center">3</h2>
+            </a>
+         </figure>
+      </div>
+
+
+     
+      <div id="counters" class="container d-flex">
+         
+        <div class="counter-guest col-lg-6 px-2">
+  
+        <div class="counter bill d-flex col-sm-12 col-md-12 p-2 my-2">
+          <div class="d-flex justify-content-center align-items-center">
+              <img class="" src="./img/guest-female.png"/>
+  
+          </div>
+          <div class="d-flex flex-column flex-fill px-5 text-end">     
+              <h1 class="counter-display ">000</h1>
+              <h1 class="player-name p-2">Andrea</h1> 
+          </div>
+        </div>
+      
+        <div class="controls d-flex col-sm-12 col-md-12">
+      <button class="counter-minus p-2 m-2 flex-fill btn btn-danger">-1</button>
+      <button class="counter-plus p-2 m-2 flex-fill btn btn-light">+1</button>
+      <button class="counter-plus2 p-2 m-2 flex-fill btn btn-light">+2</button>
+      <button class="counter-plus3 p-2 m-2 flex-fill btn btn-light">+3</button>
+      <button class="counter-plus1k p-2 m-2 flex-fill btn btn-light">+1000</button>
+  
+      <button class="counter-reset p-2 m-2 flex-fill btn btn-warning">Reset</button>
+          </div>
+  
+      </div>
+  
+      <div class="counter-bill col-lg-6 px-2">
+  
+          <div class="counter bill d-flex col-sm-12 col-md-12   p-2 my-2">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="./img/Bill.png"/>
+    
+            </div>
+            <div class="d-flex flex-column flex-fill px-5 text-end">     
+                <h1 class="counter-display-b">000</h1>
+                <h1 class="player-name p-2">Bill</h1> 
+            </div>
+          </div>
+        
+          <div class="controls d-flex col-sm-12 col-md-12 ">
+        <button class="counter-minus-b p-2 m-2 flex-fill btn btn-danger">-1</button>
+        <button class="counter-plus-b p-2 m-2 flex-fill btn btn-light">+1</button>
+        <button class="counter-plus2-b p-2 m-2 flex-fill btn btn-light">+2</button>
+        <button class="counter-plus3-b p-2 m-2 flex-fill btn btn-light">+3</button>
+        <button class="counter-reset-b p-2 m-2 flex-fill btn btn-warning">Reset</button>
+            </div>
+    
+      </div>
+  
+      </div>
+
+    </div>
+
+   
+
+
+    <div id="content">
+      <div class="lightbox short-animate" id="question">
+        
+        <h1 id="categoryTitle" class="category-title short-animate text-center">Legit or Nah</h1>
+        <div id="questionCard" class="question-card d-flex justify-content-center align-items-center">
+          <p id="questionText" class="question-text text-center">
+            What is GPT-in-a-box? What is GPT-in-a-box? What is GPT-in-a-box? 
+          </p>
+          
+        </div>
+      </div>
+   
+
+      <div id="lightbox-controls" class="short-animate">
+        <a id="close-lightbox" class="short-animate" href="#!"  onclick="resetAnimation()">Close Lightbox</a>
+      </div>
+    </div>
+
+    <div id="content-finalBot">
+      <div class="lightbox-finalBot short-animate" id="finalBot-question">
+        <h1 id="categoryTitle" class="category-title short-animate text-center">Final Bot</h1>
+        <div id="questionCard" class="question-card d-flex justify-content-center align-items-center">
+          <p id="questionText" class="question-text text-center">
+            What is GPT-in-a-box?   
+          </p>
+          
+        </div>
+      </div>
+   
+
+      <div id="lightbox-controls" class="short-animate">
+        <a id="close-lightbox" class="short-animate" href="#!"  onclick="resetAnimation()">Close Lightbox</a>
+      </div>
+    </div>
+
+    <div id="content-settings">
+      <div class="lightbox-settings short-animate" id="settings">
+   
+        <div class="container overflow-y-auto questions-input my-5">
+          <p id="GFG_DOWN" class="text-center" style="color:#7E53FF;
+          font-size: 20px;
+          font-weight: bold;">
+</p>
+        <label for="LNx1-input" class="form-label">Legit or Nah</label>
+        <div id="LNx1-question" class="d-flex my-2">
+          <div class="input-group ln">
+            <span class="input-group-text">LNx1</span>
+            <textarea type='text' id='LNx1-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2 "><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="LNx2-question"  class="d-flex my-2">
+          <div class="input-group ln">
+            <span class="input-group-text">LNx2</span>
+            <textarea type='text' id='LNx2-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="LNx3-question"  class="d-flex my-2">
+          <div class="input-group ln">
+            <span class="input-group-text">LNx3</span>
+            <textarea type='text' id='LNx3-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+
+        <label for="SSx1-input" class="form-label">Succinctly Succinct</label>
+        <div id="SSx1-question"  class="d-flex my-2">
+          <div class="input-group ss">
+            <span class="input-group-text">SSx1</span>
+            <textarea type='text' id='SSx1-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="SSx2-question"  class="d-flex my-2">
+          <div class="input-group ss">
+            <span class="input-group-text">SSx2</span>
+            <textarea type='text' id='SSx2-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="SSx3-question"  class="d-flex my-2">
+          <div class="input-group ss">
+            <span class="input-group-text">SSx3</span>
+            <textarea type='text' id='SSx3-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+
+        <label for="ASx1-input" class="form-label">Acronym Speedfire</label>
+        <div id="ASx1-question"  class="d-flex my-2">
+          <div class="input-group as">
+            <span class="input-group-text">ASx1</span>
+            <textarea type='text' id='ASx1-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="ASx2-question"  class="d-flex my-2">
+          <div class="input-group as">
+            <span class="input-group-text">ASx2</span>
+            <textarea type='text' id='ASx2-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="ASx3-question"  class="d-flex my-2">
+          <div class="input-group as">
+            <span class="input-group-text">ASx3</span>
+            <textarea type='text' id='ASx3-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+
+        <label for="WCx1-input" class="form-label">Wild Card</label>
+        <div id="WCx1-question"  class="d-flex my-2">
+          <div class="input-group wc">
+            <span class="input-group-text">WCx1</span>
+            <textarea type='text' id='WCx1-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="WCx2-question"  class="d-flex my-2">
+          <div class="input-group wc">
+            <span class="input-group-text">WCx2</span>
+            <textarea type='text' id='WCx2-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="WCx3-question"  class="d-flex my-2">
+          <div class="input-group wc">
+            <span class="input-group-text">WCx3</span>
+            <textarea type='text' id='WCx3-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+
+        <label for="Cx1-input" class="form-label">CERTainly</label>
+        <div id="Cx1-question"  class="d-flex my-2">
+          <div class="input-group c">
+            <span class="input-group-text">Cx1</span>
+            <textarea type='text' id='Cx1-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="Cx2-question"  class="d-flex my-2">
+          <div class="input-group c">
+            <span class="input-group-text">Cx2</span>
+            <textarea type='text' id='Cx2-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+        <div id="Cx3-question"  class="d-flex my-2">
+          <div class="input-group c">
+            <span class="input-group-text">Cx3</span>
+            <textarea type='text' id='Cx3-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+
+        <label for="FB-input" class="form-label">Final Bot</label>
+        <div id="FB-question"  class="d-flex my-2">
+          <div class="input-group fb">
+            <span class="input-group-text">Final Bot</span>
+            <textarea type='text' id='FB-input' class="form-control text-input" aria-label="With textarea"  ></textarea>
+          </div>
+           <button class="saveButton mx-2"><i class="far fa-save fa-2x"></i></button>
+        </div>
+
+      </div>
+
+      </div>
+   
+
+      <div id="lightbox-controls" class="short-animate">
+        <a id="close-lightbox" class="short-animate" href="#!"  onclick="resetAnimation()">Close Lightbox</a>
+      </div>
+    </div>
+   
+    <script src="https://kit.fontawesome.com/c0711139d1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   <script>
+      let el_down = document.getElementById("GFG_DOWN");
+
+          const addText = (ev) => {
+            let questions = [];
+
+            let fields = document.querySelectorAll(
+              "#LNx1-question, #LNx2-question, #LNx3-question, #SSx1-question, #SSx2-question, #SSx3-question, #ASx1-question, #ASx2-question, #ASx3-question, #WCx1-question, #WCx2-question, #WCx3-question, #Cx1-question, #Cx2-question, #Cx3-question, #FB-question"
+            );
+            fields.forEach(function (element) {
+              questions.push({
+                field: element.id,
+                text: element.querySelector(".text-input").value
+              });
+            });
+            console.log(questions);
+           // console.log(questions[0]);
+            localStorage.setItem("questionsData", JSON.stringify(questions));
+            el_down.innerHTML =
+                "Questions set";
+          };
+
+          document.querySelectorAll(".saveButton").forEach(function (btn) {
+            btn.addEventListener("click", addText);
+          });
+
+          // on page load
+          let stored = JSON.parse(localStorage.getItem("questionsData"));
+          if (stored) {
+            console.log(stored);
+            stored.forEach(function (item) {
+              document
+                .querySelector("#" + item.field)
+                .querySelector(".text-input").value = item.text;
+            });
+             
+          }
+
+
+
+      function resetAnimation(){
+        
+        var categoryTitleEl = document.getElementById('categoryTitle'); // get a reference to the targeted element
+        categoryTitleEl.classList.remove('animate-category-title'); // add the class name to that element
+
+        var questionCardEl = document.getElementById('questionCard'); // get a reference to the targeted element
+        questionCardEl.classList.remove('animate-question'); // add the class name to that element
+ 
+        
+
+
+      }
+
+        function playCard(id) {
+
+          console.log(id)
+          var newline = "\r\n";
+          let category =  document.getElementById(id)
+          // returns 'true' if the class exists, and 'false' if it doesn't.
+          if(category.classList.contains("legit-nah")){
+            document.getElementById("categoryTitle").textContent="Legit or Nah";
+            document.getElementById('question').style.backgroundColor= "#01e1ec";
+          }else if(category.classList.contains("succinctly-succinct")){
+            document.getElementById("categoryTitle").textContent="Succinctly"+ newline + "Succinct";
+            document.getElementById('question').style.backgroundColor = "#78DF00";
+          }else if(category.classList.contains("acronym-speedfire")){
+            document.getElementById("categoryTitle").textContent="Acronym"+ newline + "Speedfire";
+            document.getElementById('question').style.backgroundColor = "#FF8A71";
+          }else if(category.classList.contains("wild-card")){
+            document.getElementById("categoryTitle").textContent="Wild Card";
+            document.getElementById('question').style.backgroundColor = "#A5A5A5";
+          }else if(category.classList.contains("certainly")){
+            document.getElementById("categoryTitle").textContent="CERTainly";
+            document.getElementById('question').style.backgroundColor = "#C7BDFF";
+          }else if(category.classList.contains("final-bot")){
+            document.getElementById("categoryTitle").textContent="Final Bot";
+            document.getElementById('question').style.backgroundColor = "#7E53FF";
+            document.getElementById('questionCard').style.backgroundImage = "url('./img/fb-question-card.png')";
+            document.getElementById("questionText").style.top = "5vw";
+ 
+          }
+
+
+
+           switch(id) {
+            case 'LNx1':
+                    document.getElementById("questionText").innerHTML=stored[0].text;
+            break;
+            case 'LNx2':
+            document.getElementById("questionText").innerHTML=stored[1].text;
+            break;
+            case 'LNx3':
+            document.getElementById("questionText").innerHTML=stored[2].text;
+            break;
+            case 'SSx1':
+            document.getElementById("questionText").innerHTML=stored[3].text;
+              break;
+            case 'SSx2':
+            document.getElementById("questionText").innerHTML=stored[4].text;
+              break;
+            case 'SSx3':
+            document.getElementById("questionText").innerHTML=stored[5].text;
+              break;
+            case 'ASx1':
+            document.getElementById("questionText").innerHTML=stored[6].text;
+              break;
+            case 'ASx2':
+            document.getElementById("questionText").innerHTML=stored[7].text;
+              break;  
+            case 'ASx3':
+            document.getElementById("questionText").innerHTML=stored[8].text;
+              break;
+              case 'WCx1':
+              document.getElementById("questionText").innerHTML=stored[9].text;
+              break;
+              case 'WCx2':
+              document.getElementById("questionText").innerHTML=stored[10].text;
+              break;
+              case 'WCx3':
+              document.getElementById("questionText").innerHTML=stored[11].text;
+              break;
+              case 'Cx1':
+              document.getElementById("questionText").innerHTML=stored[12].text;
+              break;
+              case 'Cx2':
+              document.getElementById("questionText").innerHTML=stored[13].text;
+              break;
+              case 'Cx3':
+              document.getElementById("questionText").innerHTML=stored[14].text;
+              break;
+              case 'FBot':
+              document.getElementById("questionText").innerHTML=stored[15].text;
+              break;
+            default:
+              // code block
+          } 
+          
+
+        
+          var categoryTitleEl = document.getElementById('categoryTitle'); // get a reference to the targeted element
+        categoryTitleEl.classList.add('animate-category-title'); // add the class name to that element
+
+          var questionCardEl = document.getElementById('questionCard'); // get a reference to the targeted element
+          questionCardEl.classList.add('animate-question'); // add the class name to that element
+ 
+
+          setTimeout(() => {
+            console.log(id);
+            let currentID = id;
+            playedCard(currentID);
+          }, 1000);
+
+    
+      }
+
+      function playedCard(id){
+        console.log(id)
+       document.getElementById(id).style.filter = "grayscale(100%) opacity(50%)";
+      }
+ 
+
+      const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+ 
+
+      </script>   
+      
+      <script>
+        let counterDisplayElem = document.querySelector('.counter-display');
+        let counterMinusElem = document.querySelector('.counter-minus');
+        let counterPlusElem = document.querySelector('.counter-plus');
+        let counterPlusElem2 = document.querySelector('.counter-plus2');
+        let counterPlusElem3 = document.querySelector('.counter-plus3');
+        let counterPlusElem1k = document.querySelector('.counter-plus1k');
+        let counterReset = document.querySelector('.counter-reset');
+
+        let counterDisplayElemB = document.querySelector('.counter-display-b');
+        let counterMinusElemB = document.querySelector('.counter-minus-b');
+        let counterPlusElemB = document.querySelector('.counter-plus-b');
+        let counterPlusElem2B = document.querySelector('.counter-plus2-b');
+        let counterPlusElem3B = document.querySelector('.counter-plus3-b');
+        let counterResetB = document.querySelector('.counter-reset-b');
+
+        let count = 0;
+
+        let countB = 0;
+
+        updateDisplay();
+
+        updateDisplayB();
+
+        counterPlusElem.addEventListener("click",()=>{
+            count++;
+            updateDisplay();
+        }) ;
+
+
+        counterPlusElem2.addEventListener("click",()=>{
+            count=count+2;
+            updateDisplay();
+        }) ;
+
+
+        counterPlusElem3.addEventListener("click",()=>{
+            count=count+3;
+            updateDisplay();
+        }) ;
+
+        counterPlusElem1k.addEventListener("click",()=>{
+            count=count+1000;
+            updateDisplay();
+        }) ;
+
+        counterMinusElem.addEventListener("click",()=>{
+            count--;
+            updateDisplay();
+        });
+
+        counterReset.addEventListener("click",()=>{
+            count=0;
+            updateDisplay();
+        }) ;
+
+        counterPlusElemB.addEventListener("click",()=>{
+            countB++;
+            updateDisplayB();
+        }) ;
+
+
+        counterPlusElem2B.addEventListener("click",()=>{
+            countB=countB+2;
+            updateDisplayB();
+        }) ;
+
+
+        counterPlusElem3B.addEventListener("click",()=>{
+            countB=countB+3;
+            updateDisplayB();
+        }) ;
+
+        counterMinusElemB.addEventListener("click",()=>{
+            countB--;
+            updateDisplayB();
+        });
+
+        counterResetB.addEventListener("click",()=>{
+            countB=0;
+            updateDisplayB();
+        }) ;
+
+
+
+        function updateDisplay(){
+            counterDisplayElem.innerHTML = count;
+
+        };
+
+
+        function updateDisplayB(){
+
+            counterDisplayElemB.innerHTML = countB;
+        };
+    </script>
+
+   </body>
+</html>
+
+ 
