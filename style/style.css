@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+
+ /* <uniquifier>: Use a unique and descriptive class name */
+/*<weight>: Use a value from 100 to 900*/
+
+.montserrat-bold, .btn {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-regular, p, textarea.form-control, span {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.tektur-bold, h1, label {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.tektur-regular {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  body{
+    background-image: url('../img/BG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+.gameboard{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 9vw);
+    grid-gap: 0px 12px;
+}
+
+.gameboard-img {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+
+.btn-g{
+  position: absolute;
+  width: 215px;
+
+}
+
+.card-btn{
+  left: 10px;
+}
+
+.pointCard{
+  color: #131313;
+  position: relative;
+    top: -70%;
+    z-index: 1;
+    font-size: 2vw;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+  h1.counter-display, h1.counter-display-b{
+    font-size: 5rem;
+  }
+ 
+  img{
+    width: 167px;
+  }
+
+  .counter{
+    background-color: #fff;
+
+  }
+
+  .player-name{
+    background-color: #131313;
+    color: #fff;
+  }
+
+
+  body {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  html,body {
+    height:100%;
+    max-height:100%;
+  }
+ 
+  a.point{
+    text-decoration: none;
+    
+  }
+ 
+  #myDIV {
+    width: 300px;
+    height: 300px;
+    background-color: coral;
+    color: white;
+  }
+
+  figure.gameboard-item{
+    filter:grayscale(100%);
+    opacity:.5;
+  }
+  figure.active{
+    filter:grayscale(0%);
+    opacity:1;
+  }
+   .hover-card{
+    transform: scale(1);
+    transition: transform .4s ease-in-out;
+   }
+  
+  .hover-card:hover {
+     transform: scale(1.1);
+  }
+  
+  .short-animate {
+    -webkit-transition:.5s ease-in-out;
+    -moz-transition:.5s ease-in-out;
+    -ms-transition:.5s ease-in-out;
+    -o-transition:.5s ease-in-out;
+    transition:.5s ease-in-out;
+  }
+  
+  .long-animate {
+    
+  transition:.5s ease-out;
+  }
+  
+  html,body {
+    height:100%;
+    min-height:100%;
+  }
+  
+  
+  .animate-category-title{
+    animation: category-title-animation; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: .8s; /* don't forget to set a duration! */
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+  }
+
+   .question-card{
+    background-image: url('../img/question-card.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    opacity: 0;
+  
+   }
+   .fb-question-card{
+    background-image: url('../img/fb-question-card.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    opacity: 0;
+  
+   }
+   .animate-question{
+    animation: question-card-animation;
+    animation-duration: .8s; /* don't forget to set a duration! */
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+   }
+
+   .question-text{
+    font-size: 3vw;
+    width: 80%;
+    padding: 5%;
+    line-height: 4vw;
+    position: relative;
+   }
+   .fb-question-text{
+    font-size: 3vw;
+    width: 80%;
+    padding: 5%;
+    line-height: 4vw;
+   }
+
+  .lightbox {
+    position:fixed;
+    top:-100%;
+    bottom:100%;
+    left:0;
+    right:0;
+    background-image: url('../img/grid.png');
+    z-index:501;
+    opacity:0;
+  }
+
+  .lightbox-settings {
+    position:fixed;
+    top:-100%;
+    bottom:100%;
+    left:0;
+    right:0;
+    background-color: #484848e6;
+    z-index:501;
+    opacity:0;
+  }
+  .lightbox-finalBot {
+    position:fixed;
+    top:-100%;
+    bottom:100%;
+    left:0;
+    right:0;
+    background-color: #7E53FF;
+    background-image: url('../img/grid.png');
+    z-index:501;
+    opacity:1;
+  }
+
+
+  label{
+    color: #fff;
+  }
+  #categoryTitle {
+    line-height: 5rem;
+    white-space: pre;
+  }
+  #settings-btn{
+    background-color: #131313;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  }
+  #reset{
+    background-color: #FF8A71;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  }
+
+  #finalBot{
+    background-color: #EA1B00;
+    border: 2px solid #FF8A71 ;
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  
+
+
+  .input-group-text{
+    color: #fff;
+  }
+  .ln .input-group-text {
+    background-color:#01e1ec;
+  }
+  .ss .input-group-text {
+    background-color:#78DF00;
+  }
+  .as .input-group-text {
+    background-color:#FF8A71;
+  }
+  .wc .input-group-text {
+    background-color:#A5A5A5;
+  }
+  .c .input-group-text {
+    background-color:#C7BDFF;
+  }
+  
+  .lightbox h1 {
+    position: relative;
+    top: 40%;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    -webkit-text-stroke: 3px #131313;
+    text-shadow:
+       3px 3px 0 #131313,
+     -1px -1px 0 #131313,  
+      1px -1px 0 #131313,
+      -1px 1px 0 #131313,
+       1px 1px 0 #131313;
+    opacity: 0;
+    z-index: 100;
+    transition:.5s .5s ease-in-out;
+  }
+  
+  #lightbox-controls {
+    position:fixed;
+    height:70px;
+    width:70px;
+    top:-70px;
+    right:0;
+    z-index:502;
+    background:rgba(0,0,0,.1);
+  }
+  
+  #close-lightbox {
+    display:block;
+    position:absolute;
+    overflow:hidden;
+    height:50px;
+    width:50px;
+    text-indent:-5000px;
+    right:10px;
+    top:10px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+  }
+  
+  #close-lightbox:before {
+    content:'';
+    display:block;
+    position:absolute;
+    height:0px;
+    width:3px;
+    left:24px;
+    top:0;
+    background:white;
+    border-radius:2px;
+    -webkit-transition: .5s .5s ease-in-out;
+    -moz-transition: .5s .5s ease-in-out;
+    -ms-transition: .5s .5s ease-in-out;
+    -o-transition:.5s .5s ease-in-out;
+    transition:.5s .5s ease-in-out;
+  }
+  
+  #close-lightbox:after {
+    content:'';
+    display:block;
+    position:absolute;
+    width:0px;
+    height:3px;
+    top:24px;
+    left:0;
+    background:white;
+    border-radius:2px;
+    -webkit-transition: .5s 1s ease-in-out;
+    -moz-transition: .5s 1s ease-in-out;
+    -ms-transition: .5s 1s ease-in-out;
+    -o-transition:.5s 1s ease-in-out;
+    transition:.5s 1s ease-in-out;
+  }
+  
+  .lightbox:target {
+    top:0%;
+    bottom:0%;
+    opacity:1;
+  }
+
+  
+
+  .category-title:target {
+     
+    opacity:1;
+  }
+  
+  .lightbox:target h1 {
+    font-size: 5rem;
+    opacity:1;
+  }
+  
+  .lightbox:target ~ #lightbox-controls {
+    top:0px;
+  }
+  
+  .lightbox:target ~ #lightbox-controls #close-lightbox:after {
+    width:50px;
+  }
+  
+  .lightbox:target ~ #lightbox-controls #close-lightbox:before {
+    height:50px;
+  }
+
+  .lightbox-settings:target, .lightbox-finalBot:target {
+    top:0%;
+    bottom:0%;
+    opacity:1;
+  }
+
+  .lightbox-settings:target ~ #lightbox-controls {
+    top:0px;
+  }
+  
+  .lightbox-settings:target ~ #lightbox-controls #close-lightbox:after {
+    width:50px;
+  }
+  
+  .lightbox-settings:target ~ #lightbox-controls #close-lightbox:before {
+    height:50px;
+  }
+
+  .lightbox-finalBot:target ~ #lightbox-controls {
+    top:0px;
+  }
+  
+  .lightbox-finalBot:target ~ #lightbox-controls #close-lightbox:after {
+    width:50px;
+  }
+  
+  .lightbox-finalBot:target ~ #lightbox-controls #close-lightbox:before {
+    height:50px;
+  }
+
+  .questions-input{
+    height: 90vh;
+  }
+
+  textarea{
+    height: 50px;
+  }
+ 
+
+  
+  @keyframes wiggle {
+    0% {
+      -webkit-transform:rotate(2deg);
+    }
+    20% {-webkit-transform:rotate(-2deg);}
+    40% {-webkit-transform:rotate(2deg);}
+    60% {-webkit-transform:rotate(-2deg);}
+    80% {-webkit-transform:rotate(2deg);}
+    100% {-webkit-transform:rotate(-2deg);}
+  }
+
+  @keyframes hover-scale {
+    0% {
+      -webkit-transform:scale(1);
+    }
+     
+    100% {
+      -webkit-transform:scale(1.2);
+    }
+  }
+
+  @keyframes category-title-animation{
+    0% {
+      top: 40%;
+      -webkit-transform:scale(1);
+      
+    }
+     
+    100% {
+      -webkit-transform:scale(.7);
+      top: 20%;
+    }
+  }
+
+  @keyframes question-card-animation{
+    0% {
+       
+      -webkit-transform:scale(0);
+      opacity: 0;
+    }
+     
+    100% {
+      -webkit-transform:scale(1);
+      opacity: 1;
+     
+    }
+  }
+
+ 
