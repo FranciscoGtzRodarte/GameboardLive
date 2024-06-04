@@ -52,33 +52,52 @@ function resetAnimation(){
 }
 
   function playCard(id) {
- addText();
+    addText();
     console.log(id)
     var newline = "\r\n";
     let category =  document.getElementById(id)
     // returns 'true' if the class exists, and 'false' if it doesn't.
     if(category.classList.contains("legit-nah")){
-      document.getElementById("categoryTitle").textContent="Legit or Nah";
-      document.getElementById('question').style.backgroundColor= "#01e1ec";
-    }else if(category.classList.contains("succinctly-succinct")){
-      document.getElementById("categoryTitle").textContent="Succinctly"+ newline + "Succinct";
-      document.getElementById('question').style.backgroundColor = "#78DF00";
-    }else if(category.classList.contains("acronym-speedfire")){
-      document.getElementById("categoryTitle").textContent="Acronym"+ newline + "Speedfire";
-      document.getElementById('question').style.backgroundColor = "#FF8A71";
-    }else if(category.classList.contains("wild-card")){
-      document.getElementById("categoryTitle").textContent="Wild Card";
-      document.getElementById('question').style.backgroundColor = "#A5A5A5";
-    }else if(category.classList.contains("certainly")){
-      document.getElementById("categoryTitle").textContent="CERTainly";
-      document.getElementById('question').style.backgroundColor = "#C7BDFF";
-    }else if(category.classList.contains("final-bot")){
-      document.getElementById("categoryTitle").textContent="Final Bot";
-      document.getElementById('question').style.backgroundColor = "#7E53FF";
-      document.getElementById('questionCard').style.backgroundImage = "url('./img/fb-question-card.png')";
-      document.getElementById("questionText").style.top = "5vw";
-
-    }
+        document.getElementById("categoryTitle").textContent="Legit or Nah";
+        document.getElementById('question').style.backgroundColor= "#01e1ec";
+        document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
+        document.getElementById("questionText").style.top = "0";
+  
+  
+      }else if(category.classList.contains("succinctly-succinct")){
+        document.getElementById("categoryTitle").textContent="Succinctly"+ newline + "Succinct";
+        document.getElementById('question').style.backgroundColor = "#78DF00";
+        document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
+        document.getElementById("questionText").style.top = "0";
+  
+  
+      }else if(category.classList.contains("acronym-speedfire")){
+        document.getElementById("categoryTitle").textContent="Acronym"+ newline + "Speedfire";
+        document.getElementById('question').style.backgroundColor = "#FF8A71";
+        document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
+        document.getElementById("questionText").style.top = "0";
+  
+  
+      }else if(category.classList.contains("wild-card")){
+        document.getElementById("categoryTitle").textContent="Wild Card";
+        document.getElementById('question').style.backgroundColor = "#A5A5A5";
+        document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
+        document.getElementById("questionText").style.top = "0";
+  
+  
+      }else if(category.classList.contains("certainly")){
+        document.getElementById("categoryTitle").textContent="CERTainly";
+        document.getElementById('question').style.backgroundColor = "#C7BDFF";
+        document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
+        document.getElementById("questionText").style.top = "0";
+  
+      }else if(category.classList.contains("final-bot")){
+        document.getElementById("categoryTitle").textContent="Final Bot";
+        document.getElementById('question').style.backgroundColor = "#7E53FF";
+        document.getElementById('questionCard').style.backgroundImage = "url('./img/fb-question-card.png')";
+        document.getElementById("questionText").style.top = "5vw";
+  
+      }
 
     let stored = JSON.parse(localStorage.getItem("questionsData"));
     if (stored) {
