@@ -16,8 +16,24 @@ const addText = (ev) => {
     console.log(questions);
    // console.log(questions[0]);
     localStorage.setItem("questionsData", JSON.stringify(questions));
-    el_down.innerHTML =
-        "Questions set";
+    el_down.innerHTML = "Questions set";
+
+    console.log(questions[0].text)
+    questions.forEach(function (element) {
+       if(element.text){
+        console.log('There as question')
+        console.log("gameboard-item-"+questions.indexOf(element));
+        var gameboardItemClass = "gameboard-item-"+questions.indexOf(element);
+        
+        var gameboardCard = document.getElementsByClassName(gameboardItemClass)[0];
+        console.log(gameboardCard);
+
+       gameboardCard.classList.add("active");
+
+       
+       
+       }
+    });
   };
 
   document.querySelectorAll(".saveButton").forEach(function (btn) {
