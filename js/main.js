@@ -1,11 +1,27 @@
  
 let el_down = document.getElementById("GFG_DOWN");
-
+const input_map = {
+  LNx1_question: "LNx1",
+  LNx2_question: "LNx2",
+  LNx3_question: "LNx3",
+  SSx1_question: "SSx1",
+  SSx2_question: "SSx2",
+  SSx3_question: "SSx3",
+  ASx1_question: "ASx1",
+  ASx2_question: "ASx2",
+  ASx3_question: "ASx3",
+  WCx1_question: "WCx1",
+  WCx2_question: "WCx2",
+  WCx3_question: "WCx3",
+  Cx1_question: "Cx1",
+  Cx2_question: "Cx2",
+  Cx3_question: "Cx3"  
+}
 const addText = (ev) => {
     let questions = [];
 
     let fields = document.querySelectorAll(
-      "#LNx1-question, #LNx2-question, #LNx3-question, #SSx1-question, #SSx2-question, #SSx3-question, #ASx1-question, #ASx2-question, #ASx3-question, #WCx1-question, #WCx2-question, #WCx3-question, #Cx1-question, #Cx2-question, #Cx3-question, #FB-question"
+      "#LNx1_question, #LNx2_question, #LNx3_question, #SSx1_question, #SSx2_question, #SSx3_question, #ASx1_question, #ASx2_question, #ASx3_question, #WCx1_question, #WCx2_question, #WCx3_question, #Cx1_question, #Cx2_question, #Cx3_question, #FB_question"
     );
     fields.forEach(function (element) {
       questions.push({
@@ -19,21 +35,25 @@ const addText = (ev) => {
     el_down.innerHTML = "Questions set";
 
     console.log(questions[0].text)
-    questions.forEach(function (element) {
-       if(element.text){
-        console.log('There as question')
-        console.log("gameboard-item-"+questions.indexOf(element));
-        var gameboardItemClass = "gameboard-item-"+questions.indexOf(element);
-        
-        var gameboardCard = document.getElementsByClassName(gameboardItemClass)[0];
-        console.log(gameboardCard);
 
+   
+    
+    questions.forEach(function (element) {
+      if(element.text){
+       console.log('There as question')
+       const textbox_value = this.value; // get text from input bpx
+       console.log(element.field);
+       const target = input_map[element.field]; // get location (ie: the id) of where the text should be placed
+       console.log(target);
+       var gameboardCard = document.getElementById(target); 
+       console.log(gameboardCard);
        gameboardCard.classList.add("active");
 
-       
-       
-       }
-    });
+      
+      
+      }
+   });
+ 
   };
 
   document.querySelectorAll(".saveButton").forEach(function (btn) {
@@ -49,6 +69,37 @@ const addText = (ev) => {
         .querySelector("#" + item.field)
         .querySelector(".text-input").value = item.text;
     });
+
+    let questions = [];
+
+    let fields = document.querySelectorAll(
+      "#LNx1_question, #LNx2_question, #LNx3_question, #SSx1_question, #SSx2_question, #SSx3_question, #ASx1_question, #ASx2_question, #ASx3_question, #WCx1_question, #WCx2_question, #WCx3_question, #Cx1_question, #Cx2_question, #Cx3_question, #FB_question"
+    );
+    fields.forEach(function (element) {
+      questions.push({
+        field: element.id,
+        text: element.querySelector(".text-input").value
+      });
+    });
+    console.log(questions);
+   // console.log(questions[0]);
+    localStorage.setItem("questionsData", JSON.stringify(questions));
+    
+    questions.forEach(function (element) {
+      if(element.text){
+       console.log('There as question')
+       const textbox_value = this.value; // get text from input bpx
+       console.log(element.field);
+       const target = input_map[element.field]; // get location (ie: the id) of where the text should be placed
+       console.log(target);
+       var gameboardCard = document.getElementById(target); 
+       console.log(gameboardCard);
+       gameboardCard.classList.add("active");
+
+      
+      
+      }
+   });
      
   }
 
@@ -128,8 +179,9 @@ function resetAnimation(){
  
     switch(id) {
         case 'LNx1':
-          console.log(stored[0]);
+        console.log(stored[0]);
         document.getElementById("questionText").innerHTML=stored[0].text;
+        
         break;
         case 'LNx2':
         document.getElementById("questionText").innerHTML=stored[1].text;
