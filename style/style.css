@@ -269,6 +269,13 @@
   font-style: normal;
   }
 
+  .boton{
+     font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  }
+
   #finalBot{
     background-color: #EA1B00;
     border: 2px solid #FF8A71 ;
