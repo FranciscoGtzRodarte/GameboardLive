@@ -176,11 +176,11 @@ function resetAnimation(){
         break;
         
         case 'SSx1':
-        document.getElementById("questionText").innerHTML=stored[3].text;
+        document.getElementById("questionText").innerHTML=stored[1].text;
           break;
         
         case 'ASx1':
-        document.getElementById("questionText").innerHTML=stored[6].text;
+        document.getElementById("questionText").innerHTML=stored[2].text;
           break;
         
         default:
