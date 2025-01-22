@@ -52,10 +52,10 @@ const addText = (ev) => {
   });
 
   // on page load
-  let stored = JSON.parse(localStorage.getItem("questionsData"));
-  if (stored) {
-    console.log(stored);
-    stored.forEach(function (item) {
+  let stored2 = JSON.parse(localStorage.getItem("questionsData"));
+  if (stored2) {
+    console.log(stored2);
+    stored2.forEach(function (item) {
       document
         .querySelector("#" + item.field)
         .querySelector(".text-input").value = item.text;
@@ -157,10 +157,10 @@ function resetAnimation(){
   
       }
 
-    let stored = JSON.parse(localStorage.getItem("questionsData"));
-    if (stored) {
-      console.log(stored);
-      stored.forEach(function (item) {
+    let stored2 = JSON.parse(localStorage.getItem("questionsData"));
+    if (stored2) {
+      console.log(stored2);
+      stored2.forEach(function (item) {
         document
           .querySelector("#" + item.field)
           .querySelector(".text-input").value = item.text;
@@ -170,17 +170,17 @@ function resetAnimation(){
  
     switch(id) {
         case 'LNx1':
-        console.log(stored[0]);
-        document.getElementById("questionText").innerHTML=stored[0].text;
+        console.log(stored2[0]);
+        document.getElementById("questionText").innerHTML=stored2[0].text;
         
         break;
         
         case 'SSx1':
-        document.getElementById("questionText").innerHTML=stored[1].text;
+        document.getElementById("questionText").innerHTML=stored2[1].text;
           break;
         
         case 'ASx1':
-        document.getElementById("questionText").innerHTML=stored[2].text;
+        document.getElementById("questionText").innerHTML=stored2[2].text;
           break;
         
         default:
