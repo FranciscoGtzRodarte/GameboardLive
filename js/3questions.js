@@ -116,21 +116,21 @@ function resetAnimation(){
     let category =  document.getElementById(id)
     // returns 'true' if the class exists, and 'false' if it doesn't.
     if(category.classList.contains("legit-nah")){
-        document.getElementById("categoryTitle").textContent="Legit or Nah";
+        document.getElementById("categoryTitle").textContent=" ";
         document.getElementById('question').style.backgroundColor= "#01e1ec";
         document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
         document.getElementById("questionText").style.top = "0";
   
   
       }else if(category.classList.contains("succinctly-succinct")){
-        document.getElementById("categoryTitle").textContent="Succinctly"+ newline + "Succinct";
+        document.getElementById("categoryTitle").textContent=" ";
         document.getElementById('question').style.backgroundColor = "#78DF00";
         document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
         document.getElementById("questionText").style.top = "0";
   
   
       }else if(category.classList.contains("acronym-speedfire")){
-        document.getElementById("categoryTitle").textContent="Acronym"+ newline + "Speedfire";
+        document.getElementById("categoryTitle").textContent=" ";
         document.getElementById('question').style.backgroundColor = "#FF8A71";
         document.getElementById('questionCard').style.backgroundImage = "url('./img/question-card.png')";
         document.getElementById("questionText").style.top = "0";

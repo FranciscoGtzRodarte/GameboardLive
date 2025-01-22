@@ -253,6 +253,7 @@
   #categoryTitle {
     line-height: 5rem;
     white-space: pre;
+    margin-bottom: 2rem;
   }
   #settings-btn{
     background-color: #131313;
@@ -315,7 +316,7 @@
     font-size: 2rem;
     font-weight: 800;
     color: #131313;
-    -webkit-text-stroke: 3px #fff;
+    -webkit-text-stroke: 6px #fff;
     text-shadow:
        3px 3px 0 #fff,
      -1px -1px 0 #fff,  
