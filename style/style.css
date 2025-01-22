@@ -40,8 +40,12 @@
 
   body{
     background-image: url('../img/BG.png');
-    background-repeat: no-repeat;
+ 
     background-size: cover;
+  }
+
+  #app{
+    margin-top: 20px;
   }
 
 
