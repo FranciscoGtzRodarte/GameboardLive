@@ -15,7 +15,8 @@ const input_map = {
   WCx3_question: "WCx3",
   Cx1_question: "Cx1",
   Cx2_question: "Cx2",
-  Cx3_question: "Cx3"  
+  Cx3_question: "Cx3",
+  FB_question: "FBot"    
 }
 const addText = (ev) => {
     let questions = [];
